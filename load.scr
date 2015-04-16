@@ -1,0 +1,25 @@
+for i in {1..13}
+do
+
+    echo ">>>>>>>>>>>>>>>>>>>>>>>>";
+    echo "Executing wget $i ......";
+    echo ">>>>>>>>>>>>>>>>>>>>>>>>";
+    
+    #random sleep time 1-10 sec
+    sleep_time=$[ ( $RANDOM % 10 ) + 1 ];
+    echo "Sleep time: $sleep_time seconds";
+    sleep $sleep_time
+
+    #random http proxy 1-630 line
+    proxy_number=$[ ( $RANDOM % 21 ) + 1 ];
+    use_proxy=`awk -v r=$proxy_number ' NR==r {print} ' proxy.list`;
+    
+    echo ">>>>>>>>>>>>>>>>>>>>>>>";
+    echo "Using proxy: $use_proxy";
+    echo ">>>>>>>>>>>>>>>>>>>>>>>";
+    export http_proxy=`$use_proxy`;
+    
+
+    wget -e robots=off -nc --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:29.0) Gecko/20100101 Firefox/29.0" --load-cookies cookies.txt -i list.txt
+
+done

@@ -1,0 +1,4 @@
+wget -e robots=off -H --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:29.0) Gecko/20100101 Firefox/29.0" --load-cookies cookies.txt -w 10 --limit-rate=20k -i list.txt
+
+
+

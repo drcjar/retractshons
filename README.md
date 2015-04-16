@@ -9,3 +9,5 @@ we delete our existing cookies, prove we're not a robot, obtain a new cookie and
 when we have the pages we process them using our ipython notebook
 
 @thatdavidmiller wrote the functions in the ipython notebook. I wrote the pandas codes and wonky regex
+
+you can see the ipython notebook here http://nbviewer.ipython.org/github/drcjar/retractshons/blob/master/retractshons.ipynb

@@ -1,4 +1,4 @@
-so herein we have a ipython notebook that we use to get a list of urls to download
+so herein we have an ipython notebook that we use to get a list of urls to download
 
 we use wget to download them using the .scr file which is from a bash script I found on the internet
 
